@@ -23,7 +23,7 @@ def main(base_url, page):
     # response = json.loads(session.get(url, headers=HEADERS, proxies=proxies, timeout=TIMEOUT).text)
     # print(url)
     # 替换成自己的已登录的cookie
-    COOKIE = '_lxsdk_cuid=17a9a3a3bf6c8-0711e462dd173-34647600-384000-17a9a3a3bf6c8; lsu=; _hc.v=675b10b1-1eb3-92e8-15ba-676cbe3e17a4.1626093831; uuid=8f219f2b8b3c41e3b7bd.1626695556.1.0.0; userTicket=wLWdxwrGuYwkBtOMcEYIkFntugDpfePwQiwbEnyo; ci=1; rvct=1%2C10; client-id=0229a7a0-4750-471c-ba83-7e526d26622f; _lxsdk=17a9a3a3bf6c8-0711e462dd173-34647600-384000-17a9a3a3bf6c8; mtcdn=K; lt=DqAMEhgPXKVGmI6efmzY2YWnWgYAAAAACw4AAKxbFAOlul_fDzLP67HROQeXiRr5xaV324Kd8LzwMdgzxVj75ir-1LP8QhKcnXfjGw; u=96648282; n=%E8%BF%9F%E6%81%A96; token2=DqAMEhgPXKVGmI6efmzY2YWnWgYAAAAACw4AAKxbFAOlul_fDzLP67HROQeXiRr5xaV324Kd8LzwMdgzxVj75ir-1LP8QhKcnXfjGw; __mta=20706055.1626093469721.1626783390833.1626783468191.11; unc=%E8%BF%9F%E6%81%A96; firstTime=1626783474452; _lxsdk_s=17ac3d89b77-8a-be9-ab2%7C%7C6'
+    COOKIE = '_lxsdk_cuid=17ac8358148c8-05e6e923a97b4c-34637600-13c680-17ac8358148c8; ci=1; rvct=1; mtcdn=K; userTicket=esAWEmvJnDRnPtIvmKjpOakOmtbTPTAuLahpcSkd; lsu=; _lxsdk=17ac8358148c8-05e6e923a97b4c-34637600-13c680-17ac8358148c8; u=96648282; n=%E8%BF%9F%E6%81%A96; lt=OIyYI-lEP1W0h_3QsFpTWHfRVpAAAAAAMQ4AACHgkz9Ud1s7Bji2ss_JfrFI0_JqxJrEKcI_IzROEQ0DAR9Kokhn1VfrjPDElEYYOg; mt_c_token=OIyYI-lEP1W0h_3QsFpTWHfRVpAAAAAAMQ4AACHgkz9Ud1s7Bji2ss_JfrFI0_JqxJrEKcI_IzROEQ0DAR9Kokhn1VfrjPDElEYYOg; token=OIyYI-lEP1W0h_3QsFpTWHfRVpAAAAAAMQ4AACHgkz9Ud1s7Bji2ss_JfrFI0_JqxJrEKcI_IzROEQ0DAR9Kokhn1VfrjPDElEYYOg; token2=OIyYI-lEP1W0h_3QsFpTWHfRVpAAAAAAMQ4AACHgkz9Ud1s7Bji2ss_JfrFI0_JqxJrEKcI_IzROEQ0DAR9Kokhn1VfrjPDElEYYOg; unc=%E8%BF%9F%E6%81%A96; __mta=119970231.1626856590396.1626964435545.1627389984295.13; client-id=2aedb251-7b3f-4b15-afbc-a6e11362e2e8; firstTime=1627389989395; _lxsdk_s=17ae8004117-1bf-9e7-f6b%7C%7C6'
     cookies = {i.split('=')[0]: i.split('=')[1] for i in COOKIE.split('; ')}
     response = json.loads(requests.get(url, headers=HEADERS, cookies=cookies, timeout=TIMEOUT).text)
     # print(response)
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     # 获取数据
     for page in range(1, MAX_PAGES + 1):
         main(BASE_URL, page)
-        time.sleep(random.randint(1,3))
+        time.sleep(random.randint(10,20))
 
     # 可视化分析
     view = View()

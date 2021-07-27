@@ -40,7 +40,7 @@ DATA = {
     "page": "1",
     "userId": "96648282",
     # "uuid": UUID,
-    "uuid": "4411144c0b504ba4ae3b.1626146478.1.0.0",
+    "uuid": "ac1dfd7828e34c4c9578.1626856587.1.0.0",
     "platform": "1",
     "partner": "126",
     "originUrl": "https://{}.meituan.com/meishi/".format(CITIES[CITYNAME]),

@@ -31,7 +31,7 @@ python meituan.py
 
 - 北京美食店铺排行榜前10名( 仅限美团数据 ) 
 
-![top10](view/top10.jpg)
+![top10](configs/view/top10.jpg)
 
 - MySql 数据
 

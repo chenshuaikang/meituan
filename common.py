@@ -17,7 +17,7 @@ def get_cities():
     cities = {}
     [cities.update({a.text(): a.attr('href').replace('.', '/').split('/')[2]}) for a in a_lists]
     # print(cities)
-    with open('utils/cities.json', 'w', encoding='utf-8') as f:
+    with open('configs/utils/cities.json', 'w', encoding='utf-8') as f:
         f.write(json.dumps(cities, indent=2, ensure_ascii=False))
 
 def get_uuid():
@@ -30,7 +30,7 @@ def get_uuid():
     res = requests.get(url, headers=headers).text
     # print(res)
     uuid = re.findall(r'"uuid":"(.*?)"', res, re.S)[0]
-    with open('utils/uuid.log', 'w') as f:
+    with open('configs/utils/uuid.log', 'w') as f:
         f.write(uuid)
 
 def save(data):
