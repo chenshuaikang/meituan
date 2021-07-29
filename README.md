@@ -2,6 +2,41 @@
 
 &emsp; 通过接口抓取美团美食店铺信息，并做相关的数据分析。
 
+## 项目结构
+```html
+.
+├── README.md
+├── common.py
+├── configs
+│   ├── config.py
+│   ├── parse.py
+│   ├── requirements.txt
+│   ├── token_.py
+│   ├── utils
+│   │   ├── br.json
+│   │   ├── cities.json
+│   │   ├── ua.log
+│   │   └── uuid.log
+│   ├── view
+│   │   ├── FZSTK.TTF
+│   │   ├── db.jpg
+│   │   ├── jing.jpeg
+│   │   ├── key.png
+│   │   ├── pricom.jpg
+│   │   ├── ratio.jpg
+│   │   ├── title.txt
+│   │   └── top10.jpg
+│   └── visual.py
+├── meituan.py
+```
+
+## 主要实现过程
+1. 组装token、cookie、ua等基础参数
+2. 通过requests获取数据
+3. 解析json数据
+4. 保存数据至mysql数据库
+5. 使用matplotlib进行可视化分析
+
 ## 环境依赖
 
 ```python
@@ -17,15 +52,15 @@ pip3 install -r requirements.txt
 
 ## 运行
 
-切换至 meituan 文件夹的根目录执行：
+切换至 meituan 文件夹的根目录执行（运行之前请确保已经安装了相关模块及数据库）：
 
-```
+```python
 # pip3 install -r configs/requirements.txt
 python common.py
 python meituan.py
 ```
 
-## 数据分析
+## 数据分析展示
 
 - 美食店铺名称词云
   ![key](configs/view/key.png)
