@@ -63,18 +63,23 @@ python meituan.py
 ## 数据分析展示
 
 - 美食店铺名称词云
+  
   ![key](configs/view/key.png)
 
 - 北京美食店铺排行榜前10名( 仅限美团数据 )
+  
   ![top10](configs/view/top10.jpg)
 
 - 店铺价格与评论数量的关联性
-  ![top10](configs/view/pricom.jpg)
+  
+  ![pricom](configs/view/pricom.jpg)
 
 - 美食店铺各评分占比
-  ![top10](configs/view/ratio.jpg)
+  
+  ![ratio](configs/view/ratio.jpg)
 
 - MySql 数据
+  
   ![db](configs/view/db.jpg)
   
 ## 公告
