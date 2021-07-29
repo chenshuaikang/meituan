@@ -3,8 +3,6 @@
 import pandas as pd
 from pylab import *
 import pymysql
-#import matplotlib as mplt
-#from matplotlib.font_manager import
 from configs.config import HOST, PORT, USER, PASS, DB, TABLE
 from wordcloud import WordCloud
 import cv2
@@ -37,7 +35,7 @@ class View(object):
         """美食店铺各评分占比"""
         df = pd.read_sql('select avgscore from {table}'.format(table=TABLE), self.connect)
         # 饼状图
-        fig = df['avgscore'].value_counts().plot(kind='pie', autopct='%1.1f%%').get_figure()
+        fig = df['avgscore'].value_counts().plot(kind='pie').get_figure()
         fig.savefig('{}{}{}.jpg'.format(self.dirname, '/view', '/ratio'))
         # plt.show()
 
@@ -65,7 +63,7 @@ class View(object):
             with open(text_path, 'r', encoding='utf-8') as f:
                 text = f.read()
             cut_text = " ".join(jieba.cut(text))
-            color_mask = cv2.imread(dirname + '/qin.png')
+            color_mask = cv2.imread(dirname + '/jing.jpeg')
             print(dirname)
             cloud = WordCloud(
                 # 设置字体，不指定就会出现乱码
